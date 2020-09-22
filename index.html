@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
+    <title>-Radar Chart-</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- D3.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"
+      charset="utf-8"
+    ></script>
+
+  </head>
+  <body>
+    <div class="radarChart"></div>
+
+    <script src="radarChart.js"></script>
+    <script>
+      const random = () => Math.random();
+      const data = [
+        [
+          //Firefighters
+          { axis: "Claridad del rol", value: random() },
+          { axis: "Respeto", value: random() },
+          { axis: "Comunicacion", value: random() },
+          { axis: "Compensacion", value: random() },
+          { axis: "Desarrollo profesional", value: random() },
+          { axis: "Plan y Toma de decisiones", value: random() },
+          { axis: "Innovacion", value: random() },
+          { axis: "Relaciones", value: random() },
+          { axis: "Trabajo en equipo  ", value: random() },
+          { axis: "Calidad del servicio", value: random() },
+          { axis: "Manejo de conflictos", value: random() },
+          { axis: "Compromiso", value: random() },
+          { axis: "Entrenamiento y aprendizaje", value: random() },
+          { axis: "Direccion", value: random() },
+        ],
+        [
+          //Developers
+          { axis: "Claridad del rol", value: random() },
+          { axis: "Respeto", value: random() },
+          { axis: "Comunicacion", value: random() },
+          { axis: "Compensacion", value: random() },
+          { axis: "Desarrollo profesional", value: random() },
+          { axis: "Plan y Toma de decisiones", value: random() },
+          { axis: "Innovacion", value: random() },
+          { axis: "Relaciones", value: random() },
+          { axis: "Trabajo en equipo  ", value: random() },
+          { axis: "Calidad del servicio", value: random() },
+          { axis: "Manejo de conflictos", value: random() },
+          { axis: "Compromiso", value: random() },
+          { axis: "Entrenamiento y aprendizaje", value: random() },
+          { axis: "Direccion", value: random() },
+        ],
+        [
+          //Admins
+          { axis: "Claridad del rol", value: random() },
+          { axis: "Respeto", value: random() },
+          { axis: "Comunicacion", value: random() },
+          { axis: "Compensacion", value: random() },
+          { axis: "Desarrollo profesional", value: random() },
+          { axis: "Plan y Toma de decisiones", value: random() },
+          { axis: "Innovacion", value: random() },
+          { axis: "Relaciones", value: random() },
+          { axis: "Trabajo en equipo  ", value: random() },
+          { axis: "Calidad del servicio", value: random() },
+          { axis: "Manejo de conflictos", value: random() },
+          { axis: "Compromiso", value: random() },
+          { axis: "Entrenamiento y aprendizaje", value: random() },
+          { axis: "Direccion", value: random() },
+        ],
+      ];
+
+      RadarChart(".radarChart", data);
+    </script>
+  </body>
+</html>
