@@ -96,8 +96,8 @@ function RadarChart(selector, data) {
     .attr("x2",(d, i) => rScale(maxValue * 1.1) * Math.cos(angleSlice * i - Math.PI / 2))
     .attr("y2",(d, i) => rScale(maxValue * 1.1) * Math.sin(angleSlice * i - Math.PI / 2))
     .attr("class", "line")
-    .style("stroke", "gray")
-    .style("stroke-width", "2px");
+    // .style("stroke", "gray")
+    // .style("stroke-width", "2px");  Remove line stroke by Lea's request.
 
   //Append the labels at each axis
   axis
@@ -134,8 +134,8 @@ function RadarChart(selector, data) {
     .append("path")
     .attr("class", "radarArea")
     .attr("d", (d, i) => radarLine(d))
-    .style("fill", (d, i) => options.color(i))
-    .style("fill-opacity", options.opacityArea)
+    .style("fill", "none") //(d, i) => options.color(i)
+    // .style("fill-opacity", options.opacityArea)      Remove fill color by Lea's request.
     .on("mouseover", blobWrapperMouseOver)
     .on("mouseout", blobWrapperMouseOut);
 
